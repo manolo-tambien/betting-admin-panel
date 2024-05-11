@@ -4,7 +4,7 @@ import { AdminPanel } from "../components/admin-panel";
 export default function Home() {
   return (
     <div> 
-      <span>dashboard</span>
+      <span>Root Home</span>
     </div>
      
   );

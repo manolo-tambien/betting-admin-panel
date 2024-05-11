@@ -1,8 +1,9 @@
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuItem } from '../components/ui/dropdown-menu'
-import { Sheet, PanelLeftIcon, Link, Package2Icon, HomeIcon, ShoppingCartIcon, PackageIcon } from 'lucide-react'
+import {  FileBarChart, PanelLeft,Hammer, Package2Icon, Home, ShoppingCart, PackageIcon } from 'lucide-react'
 import React from 'react'
 import { Button } from './ui/button'
-import { SheetTrigger, SheetContent } from './ui/sheet'
+import { Sheet, SheetTrigger, SheetContent } from './ui/sheet'
+import Link from "next/link"
 
 export default function HeaderContainer() {
   return (
@@ -12,30 +13,23 @@ export default function HeaderContainer() {
           <Sheet>
             <SheetTrigger asChild>
               <Button className="sm:hidden" size="icon" variant="outline">
-                <PanelLeftIcon className="h-5 w-5" />
+                <PanelLeft className="h-5 w-5" />
                 <span className="sr-only">Toggle Menu</span>
               </Button>
             </SheetTrigger>
             <SheetContent className="sm:max-w-xs" side="left">
               <nav className="grid gap-6 text-lg font-medium">
-                <Link
-                  className="group flex h-10 w-10 shrink-0 items-center justify-center gap-2 rounded-full bg-gray-900 text-lg font-semibold text-gray-50 md:text-base dark:bg-gray-50 dark:text-gray-900"
-                  href="#"
-                >
-                  <Package2Icon className="h-5 w-5 transition-all group-hover:scale-110" />
-                  <span className="sr-only">Acme Inc</span>
+                <Link className="flex items-center gap-4 px-2.5 text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-gray-50" href="#">
+                  <Home className="h-5 w-5" />
+                  Admin Dashboard
                 </Link>
                 <Link className="flex items-center gap-4 px-2.5 text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-gray-50" href="#">
-                  <HomeIcon className="h-5 w-5" />
-                  Dashboard
-                </Link>
-                <Link className="flex items-center gap-4 px-2.5 text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-gray-50" href="#">
-                  <ShoppingCartIcon className="h-5 w-5" />
-                  Orders
+                  <FileBarChart className="h-5 w-5" />
+                  Reports
                 </Link>
                 <Link className="flex items-center gap-4 px-2.5 text-gray-950 dark:text-gray-50" href="#">
-                  <PackageIcon className="h-5 w-5" />
-                  Products
+                  <Hammer className="h-5 w-5" />
+                  Maintenance
                 </Link>
               </nav>
             </SheetContent>

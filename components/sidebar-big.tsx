@@ -14,20 +14,20 @@ export default function SidebarBig() {
             <TooltipTrigger asChild>
               <Link
                 className="flex h-9 w-9 items-center justify-center rounded-lg text-gray-500 transition-colors hover:text-gray-950 md:h-8 md:w-8 dark:text-gray-400 dark:hover:text-gray-50"
-                href="#"
+                href="/"
               >
                 <Home className="h-5 w-5" />
                 <span className="sr-only">Admin Dashboard</span>
-
               </Link>
             </TooltipTrigger>
             <TooltipContent side="right">Admin Dashboard</TooltipContent>
           </Tooltip>
           <Tooltip>
             <TooltipTrigger asChild>
+            {/* Makes icon/link selected style: bg-gray-100 */}
               <Link
-                className="flex h-9 w-9 items-center justify-center rounded-lg bg-gray-100 text-gray-900 transition-colors hover:text-gray-950 md:h-8 md:w-8 dark:bg-gray-800 dark:text-gray-50 dark:hover:text-gray-50"
-                href="#"
+                className="flex h-9 w-9 items-center justify-center rounded-lg  text-gray-900 transition-colors hover:text-gray-950 md:h-8 md:w-8 dark:bg-gray-800 dark:text-gray-50 dark:hover:text-gray-50"
+                href="/reports"
               >
                 <FileBarChart className="h-5 w-5" />
                 <span className="sr-only">Reports</span>
@@ -38,13 +38,11 @@ export default function SidebarBig() {
           <Tooltip>
             <TooltipTrigger asChild>
               <Link
-                className="flex h-9 w-9 items-center justify-center rounded-lg bg-gray-100 text-gray-900 transition-colors hover:text-gray-950 md:h-8 md:w-8 dark:bg-gray-800 dark:text-gray-50 dark:hover:text-gray-50"
-                href="#"
+                className="flex h-9 w-9 items-center justify-center rounded-lg text-gray-900 transition-colors hover:text-gray-950 md:h-8 md:w-8 dark:bg-gray-800 dark:text-gray-50 dark:hover:text-gray-50"
+                href="/maintenance"
               >
-                
                 <Hammer className="h-5 w-5" />
                 <span className="sr-only">Maintenance</span>
-
               </Link>
             </TooltipTrigger>
             <TooltipContent side="right">Maintenance</TooltipContent>
