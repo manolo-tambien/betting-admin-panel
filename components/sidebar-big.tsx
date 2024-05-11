@@ -14,7 +14,7 @@ export default function SidebarBig() {
             <TooltipTrigger asChild>
               <Link
                 className="flex h-9 w-9 items-center justify-center rounded-lg text-gray-500 transition-colors hover:text-gray-950 md:h-8 md:w-8 dark:text-gray-400 dark:hover:text-gray-50"
-                href="/"
+                href="/admin"
               >
                 <Home className="h-5 w-5" />
                 <span className="sr-only">Admin Dashboard</span>
