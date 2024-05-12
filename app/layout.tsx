@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-import SidebarBig from "../components/sidebar-big";
+import SidebarOpenend from "../components/sidebar-opened";
 import HeaderContainer from "../components/header-container";
 
 // const inter = Inter({ subsets: ["latin"] });
@@ -35,7 +35,7 @@ export default function RootLayout({
 
           {/* Iconos de la barra lateral en grande */}
           {/* SidebarBig */}
-          <SidebarBig></SidebarBig>
+          <SidebarOpenend></SidebarOpenend>
 
           {/* Iconos de la barra cerrada, espacio en blanco y dropdownprofile */}
           <div className="flex flex-col sm:gap-4 sm:py-4 sm:pl-14">

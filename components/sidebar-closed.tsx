@@ -15,7 +15,7 @@ export default function SidebarClosed() {
             </SheetTrigger>
             <SheetContent className="sm:max-w-xs" side="left">
                 <nav className="grid gap-6 text-lg font-medium">
-                    <Link className="flex items-center gap-4 px-2.5 text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-gray-50" href="#">
+                    <Link className="flex items-center gap-4 px-2.5 text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-gray-50" href="/admin">
                         <Home className="h-5 w-5" />
                         Admin Dashboard
                     </Link>
