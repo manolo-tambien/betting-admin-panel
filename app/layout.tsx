@@ -6,14 +6,14 @@ import SidebarOpenend from "../components/sidebar-opened";
 import HeaderContainer from "../components/header-container";
 
 // const inter = Inter({ subsets: ["latin"] });
-import { Inter as FontSans } from "next/font/google"
+import { Inter as FontSans } from "next/font/google";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
-})
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -27,19 +27,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(
-        " bg-background font-sans antialiased",
-        fontSans.variable
-      )}>
+      <body
+        className={cn(
+          " bg-background font-sans antialiased",
+          fontSans.variable
+        )}
+      >
         <div className="flex min-h-screen w-full flex-col bg-gray-100/40 dark:bg-gray-800/40">
-
           {/* Iconos de la barra lateral en grande */}
           {/* SidebarBig */}
           <SidebarOpenend></SidebarOpenend>
 
           {/* Iconos de la barra cerrada, espacio en blanco y dropdownprofile */}
           <div className="flex flex-col sm:gap-4 sm:py-4 sm:pl-14">
-
             {/* HeaderContainer */}
             <HeaderContainer></HeaderContainer>
 
@@ -48,7 +48,6 @@ export default function RootLayout({
               {children}
             </main>
           </div>
-
         </div>
       </body>
     </html>

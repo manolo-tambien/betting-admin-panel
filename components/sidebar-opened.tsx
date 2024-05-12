@@ -1,6 +1,11 @@
-import React, { createContext } from 'react';
-import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from './ui/tooltip'
-import { Home, FileBarChart, Hammer } from 'lucide-react'
+import React, { createContext } from "react";
+import {
+  TooltipProvider,
+  Tooltip,
+  TooltipTrigger,
+  TooltipContent,
+} from "./ui/tooltip";
+import { Home, FileBarChart, Hammer } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -11,10 +16,9 @@ import {
   DropdownMenuSub,
   DropdownMenuSubTrigger,
   DropdownMenuPortal,
-  DropdownMenuSubContent
-} from "@/components/ui/dropdown-menu"
-import Link from "next/link"
-
+  DropdownMenuSubContent,
+} from "@/components/ui/dropdown-menu";
+import Link from "next/link";
 
 export default function SidebarBig() {
   return (
@@ -24,9 +28,17 @@ export default function SidebarBig() {
           <DropdownMenuTrigger>
             <Home />
           </DropdownMenuTrigger>
-          <DropdownMenuContent side='right'>
-            <DropdownMenuLabel>Admin Dashboard</DropdownMenuLabel>
+          <DropdownMenuContent side="right">
+            <DropdownMenuLabel>Admin</DropdownMenuLabel>
             <DropdownMenuSeparator />
+            <DropdownMenuItem>
+              <Link
+                className="flex items-center justify-center rounded-lg text-gray-900 transition-colors hover:text-gray-950   dark:bg-gray-800 dark:text-gray-50 dark:hover:text-gray-50"
+                href="/admin"
+              >
+                <span>Dashboard</span>
+              </Link>
+            </DropdownMenuItem>
             <DropdownMenuSub>
               <DropdownMenuSubTrigger>
                 <span>Summary</span>
@@ -59,7 +71,7 @@ export default function SidebarBig() {
           <DropdownMenuTrigger>
             <FileBarChart />
           </DropdownMenuTrigger>
-          <DropdownMenuContent side='right'>
+          <DropdownMenuContent side="right">
             <DropdownMenuLabel>Reports</DropdownMenuLabel>
             <DropdownMenuSeparator />
             <DropdownMenuItem>
@@ -109,7 +121,7 @@ export default function SidebarBig() {
           <DropdownMenuTrigger>
             <Hammer />
           </DropdownMenuTrigger>
-          <DropdownMenuContent side='right'>
+          <DropdownMenuContent side="right">
             <DropdownMenuLabel>Maintenance</DropdownMenuLabel>
             <DropdownMenuSeparator />
             <DropdownMenuItem>
@@ -148,5 +160,5 @@ export default function SidebarBig() {
         </DropdownMenu>
       </nav>
     </aside>
-  )
+  );
 }
