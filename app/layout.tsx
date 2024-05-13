@@ -39,7 +39,7 @@ export default function RootLayout({
           <SidebarOpenend></SidebarOpenend>
 
           {/* Iconos de la barra cerrada, espacio en blanco y dropdownprofile */}
-          <div className="flex flex-col sm:gap-4 sm:py-4 sm:pl-14">
+          <div className="flex flex-col md:py-0 sm:py-4 sm:pl-14">
             {/* HeaderContainer */}
             <HeaderContainer></HeaderContainer>
 
