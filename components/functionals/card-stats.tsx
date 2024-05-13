@@ -19,7 +19,10 @@ interface CardStatsProps {
   valueStat?: number;
   iconStat?: React.ReactNode;
   colorAccent?: string;
+  colorAccentLight?: string;
 }
+import { Badge } from "@/components/ui/badge";
+import Link from "next/link";
 
 const CardStats: React.FC<CardStatsProps> = ({
   cardTitle,
@@ -31,13 +34,13 @@ const CardStats: React.FC<CardStatsProps> = ({
   valueStat,
   iconStat,
   colorAccent,
+  colorAccentLight,
 }) => {
   return (
     <Card>
       <CardContent className="pt-6 flex flex-row justify-between">
         <div className="w-3/4">
           <div className="flex flex-col justify-start">
-            
             <div className="flex items-center">
               <div className="text-lg font-semibold">{titleStat}</div>
               <div>
@@ -48,15 +51,20 @@ const CardStats: React.FC<CardStatsProps> = ({
             </div>
 
             <div className="flex items-center">
-                <div className={`text-3xl font-semibold ${colorAccent}`}>{valueStat}</div>
-                <div className={`pl-2 ${colorAccent}`}>{iconStat}</div>
+              <div className={`text-3xl font-semibold ${colorAccent}`}>
+                {valueStat}
+              </div>
+              <Badge className={`ml-1 ${colorAccentLight}`} variant="outline">
+                <div className={` ${colorAccent}`}>{iconStat}</div>
+              </Badge>
             </div>
-
           </div>
         </div>
-        <div className="w-1/4 flex flex-col justify-end items-end">
+        <div className="w-1/4 flex flex-col mb-auto justify-start items-end">
           <div className="text-right">
-            <ExternalLink></ExternalLink>
+            <Link href="#">
+              <ExternalLink className="h-4 w-4"></ExternalLink>
+            </Link>
           </div>
         </div>
       </CardContent>

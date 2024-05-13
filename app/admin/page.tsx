@@ -9,6 +9,7 @@ import {
   Users,
   ArrowUp,
   DollarSign,
+  ArrowDown,
 } from "lucide-react";
 import Link from "next/link";
 import {
@@ -75,22 +76,22 @@ export default function AdminDashboard() {
           {/* Third column */}
           <div className="flex flex-col mt-auto m-1 text-blue-500 items-start justify-end">
             <Button variant="outline">
-              <Trash className="mr-1" />
+              <Trash className="mr-1 w-4 h-4" />
               Clear all filters
             </Button>
           </div>
 
           <div className="flex ml-auto m-1 mt-auto items-end justify-end">
             <Button className="m-1" variant="outline">
-              <RefreshCw className="mr-1 text-blue-500" />
+              <RefreshCw className="mr-1 w-4 h-4 text-blue-500" />
               Refresh
             </Button>
-            <Button className="m-1" variant="outline">
-              <Printer className="mr-1 text-blue-500" />
+            <Button className="m-1 " variant="outline">
+              <Printer className="mr-1 w-4 h-4 text-blue-500" />
               Print
             </Button>
             <Button className="m-1" variant="outline">
-              <PanelsTopLeft className="mr-1 text-blue-500" />
+              <PanelsTopLeft className="mr-1 w-4 h-4 text-blue-500" />
               Change Views
             </Button>
           </div>
@@ -99,9 +100,11 @@ export default function AdminDashboard() {
         {/* Fourth row */}
         <div className="flex items-center justify-start  ">
           <span>Filter By:</span>
-          <Badge className="ml-1" variant="secondary">
+          <Badge className="ml-1 bg-blue-100" variant="secondary">
             <span className="text-blue-500">03/11/2024 - 03/17/2024</span>
-            <X></X>
+            <Link href="#">
+              <X className="w-4 h-4"></X>
+            </Link>
           </Badge>
         </div>
       </div>
@@ -109,22 +112,24 @@ export default function AdminDashboard() {
       {/* Fifth row */}
       <div className="flex items-center justify-start">
         {/* First column */}
-        <div className="w-1/4 bg-red-200 p-4">
+        <div className="w-1/4 pl-0  p-4">
           {/* <h4 className="text-lg font-semibold">Column 1</h4>
           <p>This is the content of column 1.</p> */}
           <CardStats
             titleStat="This week"
             unit="Players Lose"
-            valueStat={100}
-            iconStat={<Trash />}
+            valueStat={-18914}
+            iconStat={<ArrowDown />}
             colorAccent="text-red-500"
+            colorAccentLight="bg-red-100"
           />
         </div>
 
         {/* Second column */}
-        <div className="w-1/4 bg-blue-200 p-4">
+        <div className="w-1/4   p-4">
           <CardStats
             colorAccent="text-blue-500"
+            colorAccentLight="bg-blue-100"
             titleStat="Active Players"
             valueStat={11}
             iconStat={<Users />}
@@ -132,10 +137,11 @@ export default function AdminDashboard() {
         </div>
 
         {/* Third column */}
-        <div className="w-1/4 bg-green-200 p-4">
-        <CardStats
+        <div className="w-1/4   p-4">
+          <CardStats
             unit="Players Win"
             colorAccent="text-green-500"
+            colorAccentLight="bg-green-100"
             titleStat="Last Week"
             valueStat={8683}
             iconStat={<ArrowUp />}
@@ -143,9 +149,10 @@ export default function AdminDashboard() {
         </div>
 
         {/* Fourth column */}
-        <div className="w-1/4 bg-yellow-200 p-4">
-        <CardStats
+        <div className="w-1/4   p-4">
+          <CardStats
             colorAccent="text-blue-500"
+            colorAccentLight="bg-blue-100"
             titleStat="Distribution"
             valueStat={0}
             iconStat={<DollarSign />}
