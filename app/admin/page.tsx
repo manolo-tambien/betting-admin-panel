@@ -151,6 +151,7 @@ export default function AdminDashboard() {
         {/* Fourth column */}
         <div className="w-1/4   p-4">
           <CardStats
+            showChevronDownIcon={true}
             colorAccent="text-blue-500"
             colorAccentLight="bg-blue-100"
             titleStat="Distribution"

@@ -7,7 +7,7 @@ import {
   CardDescription,
   CardFooter,
 } from "../ui/card";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, ChevronDown } from "lucide-react";
 
 interface CardStatsProps {
   cardTitle?: string;
@@ -20,9 +20,11 @@ interface CardStatsProps {
   iconStat?: React.ReactNode;
   colorAccent?: string;
   colorAccentLight?: string;
+  showChevronDownIcon?: boolean;
 }
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
+import { Button } from "../ui/button";
 
 const CardStats: React.FC<CardStatsProps> = ({
   cardTitle,
@@ -35,6 +37,7 @@ const CardStats: React.FC<CardStatsProps> = ({
   iconStat,
   colorAccent,
   colorAccentLight,
+  showChevronDownIcon,
 }) => {
   return (
     <Card>
@@ -57,6 +60,11 @@ const CardStats: React.FC<CardStatsProps> = ({
               <Badge className={`ml-1 ${colorAccentLight}`} variant="outline">
                 <div className={` ${colorAccent}`}>{iconStat}</div>
               </Badge>
+              {showChevronDownIcon && (
+                <Button className="p-0 m-0 h-5 ml-1 mb-auto" variant={"outline"}>
+                  <ChevronDown className="h-4 w-4"></ChevronDown>
+                </Button>
+              )}
             </div>
           </div>
         </div>
