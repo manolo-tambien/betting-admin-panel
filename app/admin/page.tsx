@@ -85,9 +85,9 @@ export default function AdminDashboard() {
         </div>
       </div>
 
-      <div className="flex  bg-gray-300">
+      <div className="grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 gap-4">
 
-        <div className=" w-full sm:w-full md:w-full lg:w-1/2 py-4 bg-gray-500">
+        <div className="py-4">
           <span>Filter By:</span>
           <Badge className="ml-1 bg-blue-100" variant="secondary">
             <span className="text-blue-500">03/11/2024 - 03/17/2024</span>
@@ -97,7 +97,7 @@ export default function AdminDashboard() {
           </Badge>
         </div>
 
-        <div className=" w-full sm:w-full md:w-full lg:w-1/2 bg-gray-800">
+        <div className=" xl:ml-auto">
           <Button className="m-1" variant="outline">
             <RefreshCw className="mr-1 w-4 h-4 text-blue-500" />
             Refresh
