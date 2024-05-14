@@ -23,8 +23,9 @@ import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import CardStats from "@/components/functionals/card-stats";
-import { Card } from "@/components/ui/card";
-import ChartDemo from "@/components/functionals/chart-demo";
+import { Card, CardContent } from "@/components/ui/card";
+
+import BarChart from "@/components/bar-chart";
 
 export default function AdminDashboard() {
   return (
@@ -86,7 +87,6 @@ export default function AdminDashboard() {
       </div>
 
       <div className="grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 gap-4">
-
         <div className="py-4">
           <span>Filter By:</span>
           <Badge className="ml-1 bg-blue-100" variant="secondary">
@@ -111,7 +111,6 @@ export default function AdminDashboard() {
             Change Views
           </Button>
         </div>
-
       </div>
 
       <div className="flex flex-wrap">
@@ -161,6 +160,14 @@ export default function AdminDashboard() {
             iconStat={<DollarSign />}
           />
         </div>
+      </div>
+
+      <div className="w-full">
+        <Card>
+          <CardContent>
+            <BarChart />
+          </CardContent>
+        </Card>
       </div>
     </div>
   );
