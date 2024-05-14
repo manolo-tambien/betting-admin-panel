@@ -33,7 +33,7 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        <div className="flex min-h-screen w-full flex-col bg-gray-100/40 dark:bg-gray-800/40">
+        <div className="flex min-h-screen flex-col bg-gray-100/40 dark:bg-gray-800/40">
           {/* Iconos de la barra lateral en grande */}
           {/* SidebarBig */}
           <SidebarOpenend></SidebarOpenend>
