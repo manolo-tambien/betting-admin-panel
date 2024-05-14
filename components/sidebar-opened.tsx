@@ -22,11 +22,11 @@ import Link from "next/link";
 
 export default function SidebarBig() {
   return (
-    <aside className="fixed inset-y-0 left-0 z-10 hidden w-14 flex-col border-r bg-white sm:flex dark:bg-gray-950">
+    <aside className="fixed inset-y-0 left-0 z-10 hidden w-14 flex-col border-r sm:flex bg-sky-950 dark:bg-gray-950">
       <nav className="flex flex-col items-center gap-4 px-2 sm:py-5">
         <DropdownMenu>
           <DropdownMenuTrigger>
-            <Home />
+            <Home className="text-white my-2" />
           </DropdownMenuTrigger>
           <DropdownMenuContent side="right">
             <DropdownMenuLabel>Admin</DropdownMenuLabel>
@@ -69,7 +69,7 @@ export default function SidebarBig() {
 
         <DropdownMenu>
           <DropdownMenuTrigger>
-            <FileBarChart />
+            <FileBarChart className="text-white my-2"/>
           </DropdownMenuTrigger>
           <DropdownMenuContent side="right">
             <DropdownMenuLabel>Reports</DropdownMenuLabel>
@@ -119,7 +119,7 @@ export default function SidebarBig() {
 
         <DropdownMenu>
           <DropdownMenuTrigger>
-            <Hammer />
+            <Hammer className="text-white my-2"/>
           </DropdownMenuTrigger>
           <DropdownMenuContent side="right">
             <DropdownMenuLabel>Maintenance</DropdownMenuLabel>
